@@ -1,0 +1,3 @@
+../Core/Src/led.c:13:6:LedStart	1
+../Core/Src/led.c:17:6:LedSetValue	1
+../Core/Src/led.c:21:6:LedPulse	1
