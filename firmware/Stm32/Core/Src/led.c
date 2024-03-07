@@ -12,6 +12,7 @@
 
 void LedStart(void)
 {
+
 }
 
 void LedSetValue(uint8_t val)
