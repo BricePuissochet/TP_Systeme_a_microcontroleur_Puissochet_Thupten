@@ -1,0 +1,43 @@
+/*
+ * led.c
+ *
+ *  Created on: Feb 29, 2024
+ *      Author: bricpuis65
+ */
+
+#include "led.h"
+#include <stdio.h>
+#include <stdint.h>
+#include "tim.h"
+
+unsigned char brightness = 0;
+unsigned char counter = 1;
+
+void LedStart(void)
+{
+	LL_GPIO_SetOutputPin(GPIOA, LL_GPIO_PIN_8);
+	 //LL_IOP_GRP1_EnableClock(LL_IOP_GRP1_PERIPH_GPIOA);
+
+	//LL_TIM_EnableCounter(TIM2);
+	//LL_TIM_CC_EnableChannel(TIM2,LL_TIM_CHANNEL_CH1);
+}
+
+void LedSetValue(uint8_t val)
+{
+	LL_TIM_OC_SetCompareCH1(TIM2, 200);
+}
+
+void LedPulse(void)
+{
+
+	brightness += counter;
+
+	if (brightness >= 255){
+		counter = -1;
+	}
+
+	if (brightness <= 0){
+		counter = 1;
+	}
+
+}

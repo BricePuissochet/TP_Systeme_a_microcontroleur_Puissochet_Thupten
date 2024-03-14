@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdint.h>
+#include "Serial.h"
+
+uint8_t SerialTransmit(char * pData, uint16_t Size){
+
+	for(uint16_t i = 0;i<Size;i++){
+		LL_USART_TransmitData8(USART2, *pData++);
+	}
+}
+// Dans cet exemple, on fait du polling, et c'est pas très grave
+char SerialReceiveChar(void){
+
+}

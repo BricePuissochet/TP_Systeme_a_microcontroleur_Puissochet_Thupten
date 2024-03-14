@@ -1,17 +1,17 @@
-17:25:39 **** Incremental Build of configuration Debug for project Stm32 ****
+17:16:30 **** Incremental Build of configuration Debug for project Stm32 ****
 make -j16 all 
-arm-none-eabi-gcc "../Core/Src/led.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -DSTM32L021xx -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/led.d" -MT"Core/Src/led.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/led.o"
+arm-none-eabi-gcc "../Core/Src/Serial.c" -mcpu=cortex-m0plus -std=gnu11 -g3 -DDEBUG -DUSE_FULL_LL_DRIVER -DSTM32L021xx -DHSE_VALUE=8000000 -DHSE_STARTUP_TIMEOUT=100 -DLSE_STARTUP_TIMEOUT=5000 -DLSE_VALUE=32768 -DMSI_VALUE=2097000 -DHSI_VALUE=16000000 -DLSI_VALUE=37000 -DVDD_VALUE=3300 -DPREFETCH_ENABLE=0 -DINSTRUCTION_CACHE_ENABLE=1 -DDATA_CACHE_ENABLE=1 -c -I../Core/Inc -I../Drivers/STM32L0xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32L0xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Serial.d" -MT"Core/Src/Serial.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Serial.o"
 arm-none-eabi-gcc -o "Stm32.elf" @"objects.list"   -mcpu=cortex-m0plus -T"/users/bricpuis65/Documents/TP_Systeme_a_microcontroleur_Puissochet_Thupten/firmware/Stm32/STM32L021K4TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 Finished building target: Stm32.elf
  
 arm-none-eabi-size  Stm32.elf 
 arm-none-eabi-objdump -h -S Stm32.elf  > "Stm32.list"
    text	   data	    bss	    dec	    hex	filename
-   7868	     12	   1564	   9444	   24e4	Stm32.elf
+   8128	     16	   1568	   9712	   25f0	Stm32.elf
 Finished building: default.size.stdout
  
 Finished building: Stm32.list
  
 
-17:25:40 Build Finished. 0 errors, 0 warnings. (took 841ms)
+17:16:31 Build Finished. 0 errors, 0 warnings. (took 950ms)
 
